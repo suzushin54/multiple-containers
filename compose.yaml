@@ -1,0 +1,18 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/go:1.20-bookworm
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    links:
+      - web
+    environment:
+      - APP_ENV=development
+
+  web:
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    environment:
+      - REACT_APP_API_URL=http://app:8000

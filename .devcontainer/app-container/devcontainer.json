@@ -1,0 +1,8 @@
+{
+    "name": "App Container",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "app",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/app"
+  }
+  
